@@ -28,4 +28,4 @@ GIT COMMAND'S
         •	git merge branch                     - We can merge the self created branch with default branch 
         •	git short log                         - It only reflect the commit message which we have given
         •       git tag -a "annotation" -m "msg"     - It used to give a tag to a particular commit 
-        •       git cherry -pick commit id           - Copying 1 file from default branch to created branch
+        •       git cherrypick commit id           - Copying 1 file from default branch to created branch
