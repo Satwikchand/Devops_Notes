@@ -1,0 +1,58 @@
+"VCS" :- Version Control System 
+"SCM":- Source code management 
+"LVCS" :- Local version control system
+"CVCS" :- centralised version control system
+"DVCS" :- Distributed version control system 
+
+1.Why need version control ?
+A.*For collaboration *for storing version *figuring out what happen *backup
+
+2.Issues without version control ?
+A.*Once saved all changes made in the files as permanent and cannot be reverted back. 
+  *No record of what was done by whom.
+  *Down time that can occur because of faulty update could cost millions in loses.
+
+3.What is version control ?
+A. Version control is a system that documents changes made to a file or set of files. It allows multiple users to 
+manage multiple versions of the same unit of information.it is snapshot of your project over time.
+
+4.Version control types ?
+A. "LVC" :-*The practice of having the version database in the local computer.
+         *Local database keeps a record of the changes made to the files in version database
+  Issues :-Multiple people working on same project.
+  Solution :-Centralised version control
+
+  "CVC" :-*Local version control issues are resolved by centralized version control.
+          *In CVC a central repository is maintained where all the version files are kept.
+          *Now users can checkout and check-in files from their different computers at any time. 
+ Issues :- Incase central server failure while system goes down.
+ Solution :-Distributed version control.
+
+"DVC" :-* Version database is stored at every users local system at the end of the remote server.
+        * Users manipulate the local files and then upload the changes to the remote server.
+        * If any sever die, a client server can be used to restore.
+
+                                   "Introduction to git"
+
+What is git ?
+Git is a open source distributed version control system. Which records changes made to the file laying emphasis
+on speed, data integrity and distributed, non-linear workshop.
+
+git --help :-It shows all the commands
+git --version :-It shows the version
+  
+The git file workflow :- *The remote repository is a server where all the collaborators upload changes made to the file
+                         *Local repository is users copy of the version database.
+                         *The users access all the files through local repository and then push the changes made to the 
+                          remote repository.
+                         *Workspace is users active directory.
+                         *The users modifying existing files and create new files in this space. git tracks these changes
+                          compared to the local repository.
+                         *Stage is a place where all the modified files marked to be committed are placed.
+                         *Clone command creates copy of an existing remote repository inside the local repository.
+                         *Push command pushes all the changes made in the local repository to the remote repository.
+                         *Pull like fetch, gets all the changes from the remote repository and copies them to
+                          the local repository.
+                         *Pull merges those changes to the current working directory.
+
+           .git :-When we clone the very first time empty repository having the two objects one is ".git" and another one is README.MD
