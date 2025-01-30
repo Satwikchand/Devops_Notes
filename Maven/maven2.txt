@@ -48,5 +48,19 @@ Apache maven has an advantage i.e., when we run any of the life cycle phases whi
 ex:- If we run ( mvn package ) ( which is 4th phase ) , which will also run previous Phases as well ( Validite , Compile , test )
 ---------------------------------------------------------------------
 
+We Have to build , We Use 
 
+                ( mvn validate )  ( To see the packages their are not )
+
+Next we use Compile ( To read the packages )
+Next we use test ( To create Target Folder )
+
+Next mvn packages 
+vi pom.xml file  , change it into ' War '
+mvn package 
+copy code from pom.xml file and paste in the code 
+mvn package 
+
+Then We get the target Folder will be displayed in the drive 
+--------------------------------------------------------------------------
 
