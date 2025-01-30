@@ -23,7 +23,7 @@ Download Tomcat for Windows
 Step-2:-
 
 *Install Tomcat via the Windows service Installer for an Automated and Wizard-guided experience
-*click on Windows service installer (zip)
+*click on Windows zip ( pgp , sha512 )
 *After downloading the 32bit/64bit windows zip file, depending on your windows version , unzip the downloaded file , Right click the file and select Extract all 
 *Navigate to the Unzip file of the Apache Tomcat only 
 -----------------------------------------------------------------------------------------------------------------------------
