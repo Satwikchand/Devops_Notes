@@ -1,0 +1,52 @@
+How to install Apache Tomcat on windows 
+---------------------------------------------------------------------------------------------------------------------------
+*Apache Tomcat is an open-source webserver and servier container for javacode 
+*It at all we want to change the portnumber goto apachetomcat --> server --> server.xmlfile ( Default port number of Apachetomcat is : 8080 )
+*we can use this to change the portnumber 
+        <Connector port="8080" protocol="HTTP/1.1"
+           connectionTimeout="20000"
+           redirectPort="8443" />
+----------------------------------------------------------------------------------------------------------------------------
+*Java JRE installed and configured
+*administrator Privileges
+*In this section , we will cover two ways of installing the Tomcat web server :-
+       * via Windows 
+----------------------------------------------------------------------------------------------------------------------------
+Step-1:-
+
+Download Tomcat for Windows
+ To Download the Tomcat installation file,
+1.Offical Apache Tomcat website,version 11 
+  *click the latest version
+  *click on 64-bit zip file
+
+Step-2:-
+
+*Install Tomcat via the Windows service Installer for an Automated and Wizard-guided experience
+*click on Windows service installer (zip)
+*After downloading the 32bit/64bit windows zip file, depending on your windows version , unzip the downloaded file , Right click the file and select Extract all 
+*Navigate to the Unzip file of the Apache Tomcat only 
+-----------------------------------------------------------------------------------------------------------------------------
+
+How to Start and Stop the Apache Tomcat :- 
+---------------------------------------
+
+    Apache Tomcat-->bin--->Startup ( windows BatchFile )
+-------------------------------------------------------------------------------------------------------------------------
+
+To Stop or Shutdown :-
+-------------------
+
+*Apache Tomcat -->bin-->Shutdown ( windows Batch file )
+
+For Configurational changes :- 
+---------------------------
+
+*Apache Tomcat --> webapps
+
+For Logs :- 
+--------
+
+*Apache Tomcat --> Logs ( Apache Tomcat and also application which is running inside Tomcat )
+* we can access Apache Tomcat using local host 8080 (or) 127.0.01:8080
+ 
