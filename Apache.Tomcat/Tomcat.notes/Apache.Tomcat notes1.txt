@@ -49,4 +49,56 @@ For Logs :-
 
 *Apache Tomcat --> Logs ( Apache Tomcat and also application which is running inside Tomcat )
 * we can access Apache Tomcat using local host 8080 (or) 127.0.01:8080
- 
+=========================================================================================
+
+31-01-2025
+-----------
+
+*Bin,Logs,Configuration and Webapps  ( Folder structure of Apache Tomcat )
+*Bin ( Binary ) ---> To start & Stop the Tomcat Server
+*temp ( Temporary )  ----> when we restart all will delete
+*Logs ----> It having all the data of when we shutdown , when we startup
+*webapps ----> Hosting of the applications 
+*Localhost:8080 ---> To get into Tomcat Dashboard 
+=========================================================================================
+
+How to access the application url ( 127.0.0.1.8080 ) or ex:- Localhost:8080/aja
+*Where "aja" is artifact Name
+
+=========================================================================================
+
+*mvn archetype : generate -DgroupId=com.example.aja-DartifactId =aja -DarchetypeArtifactId =maven-archetype-webapp -DinteractiveMode=false  ( This is to generate a Project )
+
+*How we can place the artifact maven project to Target folder to Apache Tomcat webapps folder 
+
+*CP < Pathwhereartifact > < Pathwherewebappssofttomcat >
+*CP < Source > < destination > 
+*< destination > cp /< Source > ( for changing the location here and there )
+
+=========================================================================================
+
+Configuration changes :- 
+
+*When we change the port number , we have to restart the server again
+
+==========================================================================================
+
+How to change the port number
+
+*we should stop the server --> change the default portnumber other portnumber ur wish --> again startup or Restart
+*cntrl+c ( To stop the Tomcat )
+*To deploy the application another way is to by using the Tomcat GUI 
+*Access the URL of the Tomcat then Search for WAR file to deploy
+*Click on choose file button,it will open dilog box , select the artifact and then Click on open button , then you need to click on deploy button
+*How can we access the Apache Tomcat GUI
+  *First we need to Apache Tomcat folder then Conf . 
+  *modify " tomcat-user.xml " ( using text editors eg :- vi )
+*vi tomcat-user.xml
+*search for < user username = " admin "
+*need uncommit those lines < !--"&"-->
+*removing these lines we can uncommit
+*Once we modify that tomcat-user.xml file we need to save Quit
+*Then goto manager app , give the admin name & Password 
+*127.0.0.1:8080/artifact ( To show the deployed one )
+*vi server.xml ( use to edit the port number )
+============================================================================================ 
