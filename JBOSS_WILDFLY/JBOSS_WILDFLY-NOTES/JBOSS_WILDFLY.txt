@@ -1,0 +1,61 @@
+*Web server --- JBOSS Wildfly
+*What is JBOSS ?
+   
+    JBOSS is a powerful open source Java application sever developed by Red Hat 
+
+*From wildfly.org , we can download it from this
+  
+   *Current version is 35.0.0.Final
+   *Click on "ZIP"
+   *It have 2 portnumber in wildfly 
+        1.admin :- 9990
+        2.Application/Artifacts :- 8080
+Admin <URL : 9990 >
+*For Application access <URL :8080 >/application_name>
+*Next after downloded completed after extract the file of wildfly
+*The folder structure of the wildfly
+    1.domin
+    2.modules
+    3.welcome content
+    4.docx
+    5.bin
+    6.appclient
+*To Strat the wildfly go to the name folder of wildfly the "bin" folder
+           File Name :- Standlone ( windows Bathch file )
+*How to shutdown the wildfly ?
+    Click on ( x )
+*How to Create Management user ?
+    < Home folder of wildfly > ---> bin 
+    Filename :- add-user ( windows batch file )
+*When we run , It asks which user do you want to add
+   
+    a) Management user ( Admin ) ( mgmt-user.properties )
+    b) Application user ( Application-users.properties )
+ a) a , Click on Enter
+* And now it will ask user name & again click enter it will ask password & Enter It will ask re-type the password
+* How to access the wildfly
+   
+    Admin/Management Console : < URL : 9990 >
+    username & Password
+*one of the folder in "Standalone" where we have the "configuration", and deployment and "logs"
+
+===================================================================================================================
+Configuration :- Where we will be having configurations , Applications , userspecifics 
+    Eg :- mgmt-users.properties & mgmt-groups.properties
+
+Logs :- Standalone ---> Log ---> Logs of the wildfly 
+
+Deployments :- 
+*A Deployment represents anything that can be deployed ( eg :- An Application such as EJB - JAR , WAR , EAR , any kind of standard archive such as RAR or JBOSS-specific deployment ) into a server
+*you can use drag and drop to add new content or replace existing deployments . simply drag one or several files onto the deploment column . IF there's already a deployment with the same name the deployment will replaced , otherwise the deployment will be added . The deployment added by drag and drop will be enabled by default 
+*left side -----> Upload deployment 
+                  Un managed deployment 
+                  Create Empty deployment
+====================================================================================================================
+
+How to deploy the artifact ?
+ 
+    1. Copying the warfile and pasting it deployment folder of wildfly ( Home of wildfly --> Standalone --> Deployments )
+    2.CP < artifacts source path > < destination of deployments of wildfly > 
+    3.JBOSS wildfly GUI --> upload Artifact
+=====================================================================================================================  
