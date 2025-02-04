@@ -60,7 +60,7 @@ How to deploy the artifact ?
     3.JBOSS wildfly GUI --> upload Artifact
 ===================================================================================================================== 
 
-To Shutdown we use JBOSS-cli ( windows batch file )
+To Shutdown we use JBOSS-cli ( windows batch file ) ( enter connect next enter and next text shutdown press enetr ) then it will shutdown 
 *Change port number
 
       Standalone --> Configuration --> standalone.xml --> standlonefull.xml 
