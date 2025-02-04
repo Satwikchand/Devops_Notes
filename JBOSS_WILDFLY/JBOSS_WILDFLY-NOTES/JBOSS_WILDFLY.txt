@@ -128,3 +128,5 @@ Host controller:
 3.Communicates with the domain controller to apply changes to its local server instances. 
 
 ======================================================================================================================
+
+Domin is represinting to master centralize where we can manage other wildfly servers , DC & HC ( domin control & Host Control )
