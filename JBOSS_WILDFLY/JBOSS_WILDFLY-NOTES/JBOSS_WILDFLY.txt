@@ -58,4 +58,10 @@ How to deploy the artifact ?
     1. Copying the warfile and pasting it deployment folder of wildfly ( Home of wildfly --> Standalone --> Deployments )
     2.CP < artifacts source path > < destination of deployments of wildfly > 
     3.JBOSS wildfly GUI --> upload Artifact
-=====================================================================================================================  
+===================================================================================================================== 
+
+To Shutdown we use JBOSS-cli ( windows batch file )
+*Change port number
+
+      Standalone --> Configuration --> standalone.xml --> standlonefull.xml 
+*we have to change the two .xml files then only it will change the portnumbers 
