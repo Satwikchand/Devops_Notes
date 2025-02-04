@@ -65,3 +65,66 @@ To Shutdown we use JBOSS-cli ( windows batch file ) ( enter connect next enter a
 
       Standalone --> Configuration --> standalone.xml --> standlonefull.xml 
 *we have to change the two .xml files then only it will change the portnumbers 
+
+=====================================================================================================================
+4-02-2025
+---------
+Configuration:-
+
+Things to keep in mind before changing configurational changes :-
+
+1.Where to change
+2.Backup
+3.How to change
+4.Try ( or ) experiment in local environment
+5.Documentation
+======================================================================================================================
+
+Snapshot / Backup :-
+ *server.xml_history ( this will have the snapshot )
+For wildfly - configuration --> Home folder of wildfly --> standalone --> configuration --> standalone.xml_history
+
+File name : Standlone.v1 different status of the artifacts deployed in wildfly . In wildfly deployed artifacts can have various status states including 
+
+Key Deployment Status in WildFly:
+Deployed:
+The application is successfully deployed and running on the WildFly server.
+ 
+Undeployed:
+The application has been removed from the server and is not currently running. 
+Deployment process encountered an error and the application is not running.
+ 
+Starting:
+The application is currently being initialized and is not yet fully available.
+ 
+Stopping:
+The application is in the process of being gracefully shut down.
+ 
+Suspended:
+The application is temporarily paused and not actively processing requests.
+ 
+Redeploying:
+An existing deployed application is being updated with new code and re-deployed.
+ 
+How to Check Deployment Status:
+WildFly Management Console: Access the WildFly management console through a web interface to view the deployment status of all applications.
+Command Line: Use the WildFly CLI to query the status of individual deployments. 
+
+=====================================================================================================================
+
+In JBoss WildFly, a "domain controller" acts as the central management point for a group of servers within a domain, overseeing configuration changes and ensuring consistency across all servers, while a "host controller" is responsible for managing the individual application server instances running on a specific host machine, communicating with the domain controller to apply configuration updates and start/stop server processes on that host. 
+
+Key points about domain and host controllers:
+
+Domain controller:
+
+1.Stores the overall domain configuration in a "domain.xml" file.
+2.Manages the entire domain, including server groups, deployments, and configuration settings.
+3.Can be a dedicated server or configured on one of the host controllers.
+
+Host controller:
+1.Manages the application servers running on a specific host.
+2.Reads its configuration from a "host.xml" file which defines details specific to that host.
+3.Communicates with the domain controller to apply changes to its local server instances. 
+
+======================================================================================================================
