@@ -1,1 +1,59 @@
 CI&CD --> Continuous Deployment & also Delivery Continous Integration 
+Ways to trigger Jenkins Jobs :
+ There are 5 types of ways :-  
+❖  Setup automated actions that start your build based on 
+specific events like code changes ( or ) Scheduled time  
+Type – 1 : Trigger builds remotely (e.g., from scripts) 
+• In Order to use this trigger first we need to generate 
+the authentication token of the Job  
+• Enable this option if you would like to trigger new 
+builds by accessing a special predefined URL 
+• You'll need to provide an authorization token in the 
+form of a string so that only those who know it would 
+be able to remotely trigger this project's builds. 
+• This is most useful when your Jenkins instance grants 
+read access to this job to anonymous users. 
+• When that's not the case, Jenkins will reject requests 
+sent to the trigger URL even when the correct token 
+is specified. 
+• Use the following URL to Trigger build remotely : 
+JENKINS
+URL/job/ajafreestyle/build:token=TOKEN_NAME 
+/build with Parameters ? token = TOKEN_NAME 
+(or) 
+Type – 2 : Build after other projects are built ( upstream &    
+downstream) 
+• Set up a trigger so that when some other projects finish 
+building, a new build is scheduled for this project. This is 
+convenient for running an extensive test after a build is 
+complete 
+• We need to pass the Job name ( which are configured 
+already ) under , Projects to watch  
+• Trigger only if build is stable 
+• Trigger even if the build is unstable 
+• Trigger even if the build fails 
+• Always trigger, even if the build is aborted 
+Type – 3 : Build periodically ( Schedule ) 
+• This field follows the syntax of cron ( with minor 
+difference ) specifically each line consists of 5 fields 
+separated by TAB (or) whitespace  
+MINUTE     HOUR     DOM     MONTH    DOW 
+❖ MINUTE : Minutes within the hour ( 0-59 ) 
+❖ HOUR     : The hour of the day ( 0-23 ) 
+❖ DOM       : The day of the month ( 1-31 ) 
+❖ MONTH  : The month ( 1-12 ) 
+❖ DOW       : The day of the week ( 0-7 ) , where 0 and 7 are   
+Sunday 
+• To specify multiple values for one field , the following operators 
+are available in the order of precedence  
+• For reference (or) Practice go with the website “ corntab.guru ” 
+Type – 4: GitHub hook trigger for GITScm polling 
+• When Jenkins receives a GitHub push hook, GitHub 
+Plugin checks to see whether the hook came from a 
+GitHub repository which matches the Git repository 
+defined in SCM/Git section of this job.  
+Type – 5: 
+• Configure Jenkins to poll changes in SCM. 
+• Note that this is going to be an expensive operation for 
+CVS, as every polling requires Jenkins to scan the entire 
+workspace and verify it with the server.
